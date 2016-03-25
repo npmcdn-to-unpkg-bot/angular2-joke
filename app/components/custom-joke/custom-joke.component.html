@@ -32,5 +32,5 @@
     <p>
       Here's your customize joke:
     </p>
-    <blockquote>{{joke | async | uppercase}}</blockquote>
+    <blockquote [innerHtml]="joke | async | highlight: model.firstName: model.lastName | uppercase"></blockquote>
 </div>

@@ -6,12 +6,14 @@ import {JokeCategoriesResult} from '../../interfaces/joke-categories-result.inte
 import {Joke} from '../../interfaces/joke.interface';
 import {Person} from '../../interfaces/person.interface';
 import {JokesComponent} from '../jokes/jokes.component';
+import {HighlightPipe} from '../../pipes/highlight.pipe';
 
 @Component({
   selector: 'categories',
   templateUrl: 'app/components/custom-joke/custom-joke.component.html',
   providers: [JokeService],
-  directives:[]
+  directives:[],
+  pipes: [HighlightPipe]
 })
 export class CustomJokeComponent implements OnInit {
   joke: Observable<string>;
