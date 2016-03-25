@@ -1,0 +1,17 @@
+<h5>Categories</h5>
+<div>
+  <ul>
+    <li *ngFor="#category of categories | async">
+      <a (click)="showJoke(category)">
+          {{category}}
+        </a>
+    </li>
+  </ul>
+</div>
+<jokes [jokes]="jokes"></jokes>
+<!-- <div *ngIf="jokes">
+  <h5>list of jokes</h5>
+  <ul>
+    <li *ngFor="#joke of jokes | async">{{joke.id}} - {{joke.joke}}</li>
+  </ul>
+</div> -->

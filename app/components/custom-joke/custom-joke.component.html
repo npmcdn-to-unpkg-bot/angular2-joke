@@ -1,0 +1,36 @@
+<h5>Customize Joke by name</h5>
+<br>
+<div *ngIf="!joke">
+  <form (ngSubmit)="onSubmit(model)" #jokerForm="ngForm">
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="model.firstName"
+        ngControl="firstName" #firstName="ngForm" #spy required>
+      <br>TODO: remove this: {{model.firstName}} {{spy.className}}
+      <br>
+      <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+        First Name is required
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="alterEgo">Last Name</label>
+      <input type="text" class="form-control" [(ngModel)]="model.lastName"
+        ngControl="lastName" #lastName="ngForm" required>
+      <br>
+      <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+        Last Name is required
+      </div>
+    </div>
+    <button type="button" class="btn btn-default" (click)="onReset()">Reset</button>
+    <button type="submit" [disabled]="!jokerForm.form.valid" class="btn btn-default">
+      Submit
+    </button>
+  </form>
+</div>
+<div *ngIf="joke">
+    <p>
+      Here's your customize joke:
+    </p>
+    <blockquote>{{joke | async | uppercase}}</blockquote>
+</div>
