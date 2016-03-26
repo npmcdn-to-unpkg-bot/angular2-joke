@@ -1,5 +1,5 @@
 {
-  "name": "ng2-joke",
+  "name": "angular2-joke",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
