@@ -19,7 +19,7 @@ import {CustomJokeComponent} from '../custom-joke/custom-joke.component';
       </nav>
       <router-outlet></router-outlet>
     `,
-  directives: [ROUTER_DIRECTIVES, JokeComponent],
+  directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS]
 })
 
