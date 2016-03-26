@@ -1,6 +1,6 @@
-Angular 2 Getting Started
+Angular 2 Getting Started with jokes
 ---
-Angular 2 getting started with joke from http://www.icndb.com/api/.
+Angular 2 getting started with jokes. Using API from http://www.icndb.com/api/.
 
 Setup
 ------
